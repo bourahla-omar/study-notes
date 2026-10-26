@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الفيزياء</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <p class="who"><a href="../index.html">الدروس</a></p>
+      <nav>
+        <a href="../index.html">الرئيسية</a>
+        <a href="../math/index.html">الرياضيات</a>
+        <a href="index.html" aria-current="page">الفيزياء</a>
+        <a href="../speed/index.html">اختبارات السرعة</a>
+      </nav>
+    </header>
+
+    <h1>الفيزياء</h1>
+    <p class="meta">من دفتر 27 أكتوبر 2026</p>
+
+    <section id="syllabus">
+      <h2>البرنامج السنوي</h2>
+      <p>أربعة محاور. ما وصل من الدفتر حتى الآن هو بداية المحور الأول: المقادير الفيزيائية، ثم التحليل البعدي.</p>
+      <div class="sheet">
+        <h3>I — المقادير الفيزيائية</h3>
+        <p>تعريف المقادير، الأساسية والمشتقة، القياس، أنظمة الوحدات، والتحليل البعدي.</p>
+        <h3>II — الحساب الشعاعي</h3>
+        <p>المقادير السلمية والشعاعية، خصائص الشعاع، المعلم، العمليات على الأشعة، الجداء السلمي والجهوي.</p>
+        <h3>III — الحركيات</h3>
+        <p>النقطة المادية، المسار، شعاع الموضع، السرعة والتسارع، الحركة المستقيمة والدائرية.</p>
+        <h3>IV — الديناميك (التحريك)</h3>
+        <p>كمية الحركة، قوانين نيوتن، الجذب العام، أنواع القوى، الاحتكاك.</p>
+      </div>
+</section>
+
+    <section id="quantities">
+      <h2>الدرس 1: المقادير الفيزيائية</h2>
+      <p>المحاضرة الأولى (29/09/2026) والثانية (10/10/2026): ما هو المقدار الفيزيائي، وكيف نقيسه، وبأي وحدة نكتبه في النظام الدولي.</p>
+
+      <div class="callout calm">
+        <strong>الخلاصة.</strong>
+        المقدار الفيزيائي خاصية لجسم أو ظاهرة نعبر عنها بعدد مضروب في وحدة: <span class="eq">G = {G} · [G]</span>. العدد بلا وحدة لا معنى له، ويتغير إذا تغيّرت الوحدة. المقادير الأساسية مستقلة، والمشتقة تُبنى منها. القياس إما مباشر أو غير مباشر، ولكل قياس ارتياب.
+      </div>
+
+      <h3>تعريف المقدار الفيزيائي</h3>
+      <div class="def">
+        المقدار الفيزيائي هو خاصية لجسم أو ظاهرة، مثل الطول أو الكتلة أو الزمن، تُعبَّر عنها بقيمة عددية مضروبة في وحدة.
+      </div>
+      <ul>
+        <li>لا معنى للقيمة العددية دون وحدة.</li>
+        <li>يتغير العدد بتغيّر وحدته.</li>
+      </ul>
+
+      <h3>المقادير الأساسية والمشتقة</h3>
+      <div class="def">
+        <strong>أساسية:</strong> لا تُعرَّف بدلالة مقادير أساسية أخرى. باقي المقادير تُشتق منها.<br>
+        <strong>مشتقة:</strong> مقادير يمكن التعبير عنها باستعمال المقادير الأساسية.
+      </div>
+
+      <p>المقادير الأساسية في النظام الدولي SI:</p>
+      <div class="table-wrap">
+        <table class="prose">
+          <thead>
+            <tr>
+              <th>المقدار</th>
+              <th>الرمز البعدي</th>
+              <th>الوحدة</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>الطول</td><td class="eq">L</td><td>m (المتر)</td></tr>
+            <tr><td>الكتلة</td><td class="eq">M</td><td>kg (الكيلوغرام)</td></tr>
+            <tr><td>الزمن</td><td class="eq">T</td><td>s (الثانية)</td></tr>
+            <tr><td>كمية المادة</td><td class="eq">N</td><td>mol (المول)</td></tr>
+            <tr><td>درجة الحرارة</td><td class="eq">Θ</td><td>K (الكلفن)</td></tr>
+            <tr><td>شدة التيار</td><td class="eq">I</td><td>A (الأمبير)</td></tr>
+            <tr><td>شدة الإضاءة</td><td class="eq">J</td><td>cd (الكانديلا)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>أمثلة على مقادير مشتقة من الدفتر:</p>
+      <div class="table-wrap">
+        <table class="prose">
+          <thead>
+            <tr>
+              <th>المقدار</th>
+              <th>القانون</th>
+              <th>الوحدة</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>الكتلة الحجمية</td><td class="eq">ρ = m / V</td><td class="eq">kg/m³</td></tr>
+            <tr><td>السرعة</td><td class="eq">v = d / t</td><td class="eq">m/s</td></tr>
+            <tr><td>القوة</td><td class="eq">F = m · a</td><td class="eq">N = kg·m/s²</td></tr>
+            <tr><td>الضغط</td><td class="eq">P = F / S</td><td class="eq">Pa</td></tr>
+            <tr><td>الطاقة</td><td class="eq">W = F · d</td><td class="eq">J</td></tr>
+            <tr><td>الاستطاعة</td><td class="eq">P = E / t</td><td class="eq">W = J/s</td></tr>
+            <tr><td>التواتر</td><td class="eq">f = 1 / T</td><td class="eq">Hz = s⁻¹</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>تعبير الوحدات الخاصة بدلالة الوحدات الأساسية</h3>
+      <p>من الدفتر، خطوة بخطوة:</p>
+      <ul>
+        <li><strong>نيوتن:</strong> <span class="eq">N = kg·m·s⁻²</span></li>
+        <li><strong>جول:</strong> من <span class="eq">E<sub>c</sub> = ½ m v²</span> نحصل على <span class="eq">J = kg·m²·s⁻²</span></li>
+        <li><strong>واط:</strong> <span class="eq">W = J/s = kg·m²·s⁻³</span></li>
+        <li><strong>باسكال:</strong> <span class="eq">Pa = N/m² = kg·m⁻¹·s⁻²</span></li>
+        <li><strong>هرتز:</strong> <span class="eq">Hz = s⁻¹</span></li>
+        <li><strong>كولوم:</strong> <span class="eq">C = A·s</span></li>
+        <li><strong>فولت:</strong> <span class="eq">V = W/A = kg·m²·s⁻³·A⁻¹</span></li>
+      </ul>
+
+      <h3>القياس والارتياب</h3>
+      <div class="def">
+        القياس هو مقارنة مقدار فيزيائي بمقدار من النوع نفسه اختير وحدة.
+      </div>
+      <ul>
+        <li><strong>مباشر:</strong> مثل قياس الطول بالمسطرة.</li>
+        <li><strong>غير مباشر:</strong> نحسب المقدار من قياسات أخرى، مثل السرعة من المسافة والزمن.</li>
+      </ul>
+      <p>لكل قياس قيمة <span class="eq">x</span> وارتياب مطلق <span class="eq">Δx</span>، والارتياب النسبي <span class="eq">Δx / x</span>.</p>
+      <div class="sheet">
+        <p><strong>تمرين من الدفتر.</strong> ورقة مستطيلة: الطول <span class="eq">29.7 cm</span> والعرض <span class="eq">21 cm</span>، والخطأ المطلق <span class="eq">0.1 cm</span>. هذا تمرين على كتابة القياس مع الارتياب وحساب مساحة الورقة مع ارتيابها.</p>
+      </div>
+
+      <h3>أنظمة الوحدات وSI</h3>
+      <p>كانت الوحدات محلية قديماً، فظهرت المنظومة المترية في فرنسا أواخر القرن 18، ثم اعتُمد النظام الدولي SI سنة 1960.</p>
+      <p>ثوابت مفيدة من الدفتر:</p>
+      <ul>
+        <li>ثابت بلانك: <span class="eq">h ≈ 6.62×10⁻³⁴ J·s</span></li>
+        <li>ثابت بولتزمان: <span class="eq">k ≈ 1.38×10⁻²³ J/K</span></li>
+        <li>الشحنة الأولية: <span class="eq">e ≈ 1.6×10⁻¹⁹ C</span></li>
+        <li>عدد أفوجادرو: <span class="eq">N<sub>A</sub> ≈ 6.023×10²³ mol⁻¹</span></li>
+      </ul>
+
+      <h3>مضاعفات الوحدات وقواعد كتابتها</h3>
+      <p>من الكيلو إلى البيكو: <span class="eq">k = 10³</span>، <span class="eq">c = 10⁻²</span>، <span class="eq">m = 10⁻³</span>، <span class="eq">μ = 10⁻⁶</span>، <span class="eq">n = 10⁻⁹</span>، <span class="eq">p = 10⁻¹²</span>، ومعها M و G و T للكبير.</p>
+      <div class="def">
+        رمز الوحدة المأخوذ من اسم عالم يُكتب بحرف كبير: <span class="eq">N</span>، <span class="eq">A</span>، <span class="eq">J</span>. باقي الرموز صغيرة: <span class="eq">kg</span>، <span class="eq">m</span>. لا نجمع الرمز ولا نضع نقطة بعده: نكتب <span class="eq">5 kg</span> لا 5kgs.
+      </div>
+      <p>وحدات مقبولة مع SI من الدفتر: <span class="eq">1 min = 60 s</span>، <span class="eq">1 h = 3600 s</span>، <span class="eq">1 L = 1 dm³</span>، <span class="eq">1 bar = 10⁵ Pa</span>، <span class="eq">1 t = 10³ kg</span>.</p>
+
+      <h3>أمثلة محلولة على البوادئ</h3>
+      <div class="sheet">
+        <p><span class="eq">0.000045 m = 45 μm</span></p>
+        <p><span class="eq">3 500 000 W = 3.5 MW</span></p>
+        <p><span class="eq">2.5×10⁻³ A = 2.5 mA</span></p>
+        <p><span class="eq">6.5×10⁹ Hz = 6.5 GHz</span></p>
+        <p><span class="eq">1.2×10⁻⁸ m = 12 nm</span></p>
+      </div>
+
+      <h3>تحققي من نفسك</h3>
+      <details class="exercise">
+        <summary>1. هل السرعة مقدار أساسي أم مشتق؟</summary>
+        <details class="answer">
+          <summary>أظهري الإجابة</summary>
+          <p>مشتق: <span class="eq">v = d / t</span>، من الطول والزمن.</p>
+        </details>
+      </details>
+      <details class="exercise">
+        <summary>2. عبّري عن الواط بدلالة kg و m و s.</summary>
+        <details class="answer">
+          <summary>أظهري الإجابة</summary>
+          <p><span class="eq">W = J/s = kg·m²·s⁻³</span>.</p>
+        </details>
+      </details>
+      <details class="exercise">
+        <summary>3. اكتبي 0.003 m بالملّيمتر.</summary>
+        <details class="answer">
+          <summary>أظهري الإجابة</summary>
+          <p><span class="eq">3 mm</span>، لأن <span class="eq">1 mm = 10⁻³ m</span>.</p>
+        </details>
+      </details>
+</section>
+
+    <section id="dimensions">
+      <h2>الدرس 2: التحليل البعدي</h2>
+      <p>المحاضرة الثالثة. الهدف: كتابة بعد أي مقدار، والتأكد أن العلاقة الفيزيائية متجانسة.</p>
+
+      <div class="callout calm">
+        <strong>الخلاصة.</strong>
+        بعد المقدار <span class="eq">[G]</span> هو تعبيره بقوى المقادير الأساسية، غالباً <span class="eq">[G] = L<sup>α</sup> · M<sup>β</sup> · T<sup>γ</sup></span>. الجمع لا يجوز إلا لمقادير لها نفس البعد. التجانس شرط لازم لصحة العلاقة، لكنه ليس كافياً وحده.
+      </div>
+
+      <h3>تعريف البعد</h3>
+      <div class="def">
+        البعد مقدار فيزيائي نرمز له بـ <span class="eq">[G]</span>، ويُكتب جداء قوى للمقادير الأساسية. الأسس قد تكون صحيحة أو كسرية، والبعد مستقل عن اختيار وحدة الطول أو الكتلة أو الزمن.
+      </div>
+
+      <h3>قواعد الحساب البعدي</h3>
+      <div class="table-wrap">
+        <table class="prose">
+          <thead>
+            <tr>
+              <th>القاعدة</th>
+              <th>الصيغة</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>الجداء</td><td class="eq">[A B] = [A] · [B]</td></tr>
+            <tr><td>القسمة</td><td class="eq">[A / B] = [A] / [B]</td></tr>
+            <tr><td>الأس</td><td class="eq">[Aⁿ] = [A]ⁿ</td></tr>
+            <tr><td>الجمع والطرح</td><td>لا يجوزان إلا إذا كان <span class="eq">[A] = [B]</span></td></tr>
+            <tr><td>ثوابت مثل <span class="eq">π</span> و <span class="eq">sin</span> و <span class="eq">ln</span></td><td>عديمة البعد</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>جدول أبعاد شائع</h3>
+      <div class="table-wrap">
+        <table class="prose">
+          <thead>
+            <tr>
+              <th>المقدار</th>
+              <th>المعادلة البعدية</th>
+              <th>وحدة SI</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>المساحة</td><td class="eq">L²</td><td class="eq">m²</td></tr>
+            <tr><td>الحجم</td><td class="eq">L³</td><td class="eq">m³</td></tr>
+            <tr><td>السرعة</td><td class="eq">L·T⁻¹</td><td class="eq">m·s⁻¹</td></tr>
+            <tr><td>التسارع</td><td class="eq">L·T⁻²</td><td class="eq">m·s⁻²</td></tr>
+            <tr><td>الكتلة الحجمية</td><td class="eq">M·L⁻³</td><td class="eq">kg·m⁻³</td></tr>
+            <tr><td>القوة</td><td class="eq">M·L·T⁻²</td><td class="eq">N</td></tr>
+            <tr><td>الطاقة الحركية</td><td class="eq">M·L²·T⁻²</td><td class="eq">J</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>أمثلة محلولة</h3>
+      <div class="sheet">
+        <p><strong>مثال 1.</strong> الطاقة الحركية <span class="eq">E<sub>c</sub> = ½ m v²</span>.</p>
+        <p><span class="eq">[E<sub>c</sub>] = M · (L·T⁻¹)² = M·L²·T⁻²</span>، والوحدة <span class="eq">kg·m²·s⁻² = J</span>.</p>
+      </div>
+      <div class="sheet">
+        <p><strong>مثال 2.</strong> العلاقة <span class="eq">x = x₀ + v₀ t + ½ a t²</span>.</p>
+        <p>كل حد بعده طول <span class="eq">L</span>، فالعلاقة متجانسة، والنتيجة بالمتر.</p>
+      </div>
+      <div class="sheet">
+        <p><strong>مثال 3.</strong> هل <span class="eq">v = a · t²</span> متجانسة؟</p>
+        <p>يسار: <span class="eq">[v] = L·T⁻¹</span>. يمين: <span class="eq">[a][t]² = L·T⁻² · T² = L</span>. الطرفان مختلفان، فالعلاقة غير متجانسة.</p>
+      </div>
+      <div class="callout">
+        <strong>مهم.</strong>
+        التجانس شرط لازم لكنه ليس كافياً. قد تكون العلاقة متجانسة بعدياً ومع ذلك خاطئة فيزيائياً. راجعي دائماً القانون نفسه، لا البعد فقط.
+      </div>
+
+      <h3>تحققي من نفسك</h3>
+      <details class="exercise">
+        <summary>1. ما بعد الضغط؟</summary>
+        <details class="answer">
+          <summary>أظهري الإجابة</summary>
+          <p><span class="eq">P = F / S</span> فيعطي <span class="eq">[P] = M·L·T⁻² / L² = M·L⁻¹·T⁻²</span>.</p>
+        </details>
+      </details>
+      <details class="exercise">
+        <summary>2. هل يمكن جمع سرعة وتسارع؟</summary>
+        <details class="answer">
+          <summary>أظهري الإجابة</summary>
+          <p>لا. البعدان مختلفان: <span class="eq">L·T⁻¹</span> و <span class="eq">L·T⁻²</span>.</p>
+        </details>
+      </details>
+      <details class="exercise">
+        <summary>3. لماذا نقول إن التجانس ليس كافياً؟</summary>
+        <details class="answer">
+          <summary>أظهري الإجابة</summary>
+          <p>لأن علاقة خاطئة قد تتفق أبعاد طرفيها صدفة. التجانس يمنع بعض الأخطاء، ولا يثبت صحة القانون.</p>
+        </details>
+      </details>
+</section>
+
+    <footer>
+      <a href="../index.html">الرئيسية</a>
+    </footer>
+  </div>
+</body>
+</html>
