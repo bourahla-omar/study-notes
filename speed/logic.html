@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>منطق سهل في دقيقة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="tests.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <p class="who"><a href="../index.html">الدروس</a></p>
+      <nav>
+        <a href="../index.html">الرئيسية</a>
+        <a href="../math/index.html">الرياضيات</a>
+        <a href="index.html" aria-current="page">اختبارات السرعة</a>
+      </nav>
+    </header>
+
+    <div class="letter-toggle" role="group" aria-label="حروف القضايا">
+      <span>الحروف</span>
+      <button type="button" id="use-pqr" class="seg on" dir="ltr" aria-pressed="true">p q r</button>
+      <button type="button" id="use-abc" class="seg" dir="ltr" aria-pressed="false">a b c</button>
+    </div>
+
+    <section id="screen-start">
+      <h1>منطق سهل في دقيقة</h1>
+      <p>تظهر قضية أو أكثر، ثم عبارة. اختاري: أهي صحيحة (1) أم خاطئة (0)؟ العبارات قصيرة في البداية وتطول قليلاً مع ارتفاع النقاط.</p>
+      <p class="ops-note" id="ops">العمليات في هذا الاختبار: النفي، الوصل.</p>
+      <p>إذا كانت الإجابة خطأ تتوقف الجولة فوراً، ويظهر الحل من قيم القضايا حتى الناتج.</p>
+      <p class="best-line">أفضل نتيجة: <b id="best">—</b></p>
+      <p><button class="primary" id="start" type="button" disabled>ابدئي</button></p>
+    </section>
+
+    <section id="screen-play" hidden>
+      <div class="timebar" aria-hidden="true"><div id="timefill"></div></div>
+      <div class="hud">
+        <span>الوقت <b id="time">60</b></span>
+        <span>النقاط <b id="score">0</b></span>
+        <span>الأفضل <b id="best-live">—</b></span>
+      </div>
+      <ul class="givens" id="givens"></ul>
+      <p class="problem eq" id="expr" dir="ltr"></p>
+      <div class="choices">
+        <button class="choice true" id="yes" type="button">صحيحة (1)</button>
+        <button class="choice false" id="no" type="button">خاطئة (0)</button>
+      </div>
+      <p class="feedback" id="feedback" aria-live="polite"></p>
+    </section>
+
+    <section id="screen-end" hidden>
+      <h1 id="end-title" tabindex="-1">انتهى الوقت</h1>
+      <p>النقاط: <b id="final">0</b></p>
+      <p class="best-line" id="end-best"></p>
+      <div id="review" hidden>
+        <p class="problem eq" id="review-expr" dir="ltr"></p>
+        <div class="verdict">
+          <p>الإجابة المختارة: <span id="verdict-yours"></span></p>
+          <p>القيمة الصحيحة: <span id="verdict-right"></span></p>
+        </div>
+        <div class="tree-wrap" id="tree"></div>
+        <h2>من الأوراق إلى الناتج</h2>
+        <ol class="steps" id="steps"></ol>
+      </div>
+      <p>
+        <button class="primary" id="again" type="button">جولة جديدة</button>
+      </p>
+      <p><a href="index.html">كل الاختبارات</a></p>
+    </section>
+  </div>
+  <script src="best.js"></script>
+  <script src="logic.js"></script>
+</body>
+</html>

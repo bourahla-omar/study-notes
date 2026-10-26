@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الرياضيات</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <p class="who"><a href="../index.html">الدروس</a></p>
+      <nav>
+        <a href="../index.html">الرئيسية</a>
+        <a href="index.html" aria-current="page">الرياضيات</a>
+        <a href="../speed/index.html">اختبارات السرعة</a>
+      </nav>
+    </header>
+
+    <h1>الرياضيات</h1>
+    <p class="meta">من دفتر 26 أكتوبر 2026</p>
+
+    <section id="syllabus">
+      <h2>البرنامج</h2>
+      <p>قُسّم برنامج المادة إلى ثلاثة محاور. الدرس المكتوب حتى الآن هو أول بند في المحور الأول.</p>
+
+      <div class="sheet">
+        <h3>المحور الأول: الاستدلال الرياضي</h3>
+        <ol>
+          <li>المنطق والقضايا المنطقية</li>
+          <li>أنماط البرهان الرياضي</li>
+        </ol>
+
+        <h3>المحور الثاني: الأنشطة العددية</h3>
+        <p>المجموعات الأساسية للأعداد: <span class="eq">ℕ</span> ، <span class="eq">ℤ</span> ، <span class="eq">ℚ</span> ، <span class="eq">ℝ</span>.</p>
+        <ul>
+          <li>الأنشطة الحسابية في <span class="eq">ℕ</span> (الأعداد الطبيعية)</li>
+          <li>الأنشطة الحسابية في <span class="eq">ℤ</span> (الأعداد الصحيحة)</li>
+          <li>الأنشطة الحسابية في <span class="eq">ℚ</span> (الأعداد الناطقة)</li>
+          <li>الأنشطة الحسابية في <span class="eq">ℝ</span> (الأعداد الحقيقية)</li>
+        </ul>
+
+        <h3>المحور الثالث: الأنشطة الهندسية</h3>
+        <ol>
+          <li>أسس الهندسة المستوية</li>
+          <li>المضلعات والدائرة</li>
+          <li>الأشعة في المستوى</li>
+          <li>المستقيم والدائرة تحليلياً</li>
+        </ol>
+      </div>
+</section>
+
+    <section id="logic">
+      <h2>الدرس 1: المنطق الرياضي</h2>
+      <p>هذا الدرس يعلّمك أن تميّزي الجملة التي يُحكم عليها بصحيح أو خاطئ، ثم أن تحسبي قيمة جملة مركّبة من قضيتين. النفي والوصل هما الأداتان المكتوبتان في الدفتر حتى الآن.</p>
+
+      <div class="callout calm">
+        <strong>الخلاصة.</strong>
+        القضية جملة مفيدة نستطيع أن نقول عنها، بلا تردد، إنها صحيحة أو خاطئة، لا الاثنتان معاً. السؤال والأمر والجملة التي لا معنى لها ليست قضايا. قيمة الصدق تكون 1 إذا صحت القضية و 0 إذا كذبت. نفي القضية يقلب هذه القيمة. الوصل <span class="eq">P ∧ q</span> يصح فقط إذا صحت P وصحت q معاً.
+      </div>
+
+      <h3>تعريف المنطق الرياضي</h3>
+      <div class="def">
+        المنطق الرياضي يدرس كيفية تكوين الحجج وكيفية تقييمها: أصحيحة هي أم خاطئة. هو فرع من الرياضيات، ويرتبط أيضاً بالفلسفة وبميادين أخرى. نستعمله لنفكّر بوضوح، ونتعرّف على الحجة الخاطئة، ونبني حجة قوية.
+      </div>
+
+      <h3>تعريف القضية المنطقية</h3>
+      <div class="def">
+        القضية هي كل جملة مفيدة ذات معنى، لغوية أو رياضية، يمكن الحكم عليها بشكل لا لبس فيه بأنها صحيحة أو خاطئة، وليس الاثنين معاً.
+      </div>
+
+      <h3>أمثلة من الدفتر</h3>
+      <p>السؤال هنا ليس «أصحيحة أم خاطئة؟» بعد. السؤال أولاً: «هل هذه قضية؟»</p>
+      <div class="table-wrap">
+        <table class="prose">
+          <thead>
+            <tr>
+              <th>الجملة</th>
+              <th>قضية؟</th>
+              <th>لماذا</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>تقع الجزائر في شمال إفريقيا</td>
+              <td>قضية</td>
+              <td>جملة خبرية نستطيع الحكم عليها. وهي صحيحة.</td>
+            </tr>
+            <tr>
+              <td>متى يسترجع المسلمون القدس؟</td>
+              <td>ليست قضية</td>
+              <td>سؤال. كل جملة استفهامية ليست قضية.</td>
+            </tr>
+            <tr>
+              <td>من أجل كل عدد حقيقي <span class="eq">x</span> فإن <span class="eq">x ≥ 0</span></td>
+              <td>قضية</td>
+              <td>خبر واضح. وهو خاطئ، لأن <span class="eq">−1</span> عدد حقيقي وليس أكبر من صفر ولا يساويه.</td>
+            </tr>
+            <tr>
+              <td>العدد 11 عدد أولي</td>
+              <td>قضية</td>
+              <td>خبر واضح. وهو صحيح: 11 لا يقسمه إلا 1 ونفسه.</td>
+            </tr>
+            <tr>
+              <td>لا تتردد في طلب المساعدة عندما تحتاجها</td>
+              <td>ليست قضية</td>
+              <td>أمر. كل جملة بصيغة الأمر ليست قضية.</td>
+            </tr>
+            <tr>
+              <td>كل شخص له الحق في الدفاع عن نفسه</td>
+              <td>ليست قضية</td>
+              <td>في الدرس كُتبت هكذا: حكم لا يُحسم هنا بصحيح أو خاطئ.</td>
+            </tr>
+            <tr>
+              <td>يمكن للعدد الحقيقي <span class="eq">x</span> أن يحقق <span class="eq">x² + x − 1 = 0</span></td>
+              <td>قضية</td>
+              <td>خبر: «يوجد عدد حقيقي يحقق المعادلة». وهذا صحيح، لأن للمعادلة حلاً حقيقياً.</td>
+            </tr>
+            <tr>
+              <td>العدد 2 هو عدد زوجي</td>
+              <td>قضية</td>
+              <td>خبر واضح. وهو صحيح.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>متى نستعمل المنطق؟</h3>
+      <p>عندما نريد أن نجيب عن أسئلة من هذا النوع:</p>
+      <ul>
+        <li>هل هذه العبارة صحيحة أم خاطئة؟</li>
+        <li>إذا كانت صحيحة، فماذا يمكن أن نستنتج منها؟ وكيف نبرهن على ذلك؟</li>
+        <li>متى تكون عبارة مركّبة صحيحة أو خاطئة؟</li>
+      </ul>
+      <div class="def">
+        <ul>
+          <li>كل جملة استفهامية ليست قضية.</li>
+          <li>كل جملة بصيغة الأمر ليست قضية.</li>
+          <li>كل جملة لا معنى لها ليست قضية.</li>
+        </ul>
+      </div>
+
+      <h3>القيمة الحقيقية</h3>
+      <p>لكل قضية قيمة واحدة:</p>
+      <ul>
+        <li>إذا كانت صحيحة نرمز لها بـ <strong>ص</strong> أو <strong>1</strong>.</li>
+        <li>إذا كانت خاطئة نرمز لها بـ <strong>خ</strong> أو <strong>0</strong>.</li>
+      </ul>
+      <p>لا تكون القضية 1 و 0 في الوقت نفسه.</p>
+
+      <h3>جدول الحقيقة</h3>
+      <p>جدول الحقيقة يعرض كل الحالات الممكنة. عدد الحالات يساوي 2 أس عدد القضايا.</p>
+
+      <p>قضية واحدة P: حالتان.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th class="label">P</th>
+              <th>1</th>
+              <th>0</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="label">معناها</td>
+              <td>صحيحة</td>
+              <td>خاطئة</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>قضيتان P و q: أربع حالات، لأن <span class="eq">2² = 4</span>. هذا جدول الدفتر، وفيه الحالات الأربع كلها:</p>
+      <div class="table-wrap">
+        <table>
+          <tbody>
+            <tr>
+              <th class="label">P</th>
+              <td>0</td>
+              <td>1</td>
+              <td>0</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <th class="label">q</th>
+              <td>1</td>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>الترتيب في الدفتر ليس من الأصغر إلى الأكبر، وهذا لا يضر. المهم ألا تتكرر حالة وألا تنقص حالة.</p>
+
+      <div class="callout">
+        <strong>أكملي هذا الجدول.</strong>
+        لثلاث قضايا P و q و r توجد 8 حالات، لأن <span class="eq">2³ = 8</span>. الجدول الذي عنوانه «ثلاث قضايا» في الدفتر فيه 6 أعمدة فقط. هذه هي الثماني كاملة، كل عمود حالة:
+      </div>
+      <div class="table-wrap">
+        <table>
+          <tbody>
+            <tr>
+              <th class="label">P</th>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <th class="label">q</th>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+              <td>1</td>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <th class="label">r</th>
+              <td>0</td>
+              <td>1</td>
+              <td>0</td>
+              <td>1</td>
+              <td>0</td>
+              <td>1</td>
+              <td>0</td>
+              <td>1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>نفي القضية</h3>
+      <p>نفي القضية P قضية نرمز لها بـ <span class="eq">P̄</span> أو <span class="eq">¬P</span>. تخالف P في قيمتها:</p>
+      <ul>
+        <li>إذا كانت P صحيحة فإن نفيها خاطئ.</li>
+        <li>إذا كانت P خاطئة فإن نفيها صحيح.</li>
+      </ul>
+      <div class="table-wrap">
+        <table>
+          <tbody>
+            <tr>
+              <th class="label">P</th>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th class="label"><span class="eq">P̄</span></th>
+              <td>0</td>
+              <td>1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>مثال: P هي «2 عدد زوجي»، وقيمتها 1. نفيها «2 ليس عدداً زوجياً»، وقيمته 0.</p>
+
+      <h3>وصل قضيتين</h3>
+      <p>وصل P و q قضية نرمز لها بـ <span class="eq">P ∧ q</span> ونقرأها «P و q». تكون صحيحة في حالة واحدة فقط: إذا كانت P صحيحة و q صحيحة. في باقي الحالات تكون خاطئة.</p>
+      <p>يكفي أن يكذب أحد الطرفين حتى يكذب الوصل كله.</p>
+      <p>في الدفتر ثلاث حالات. أُضيفت الحالة الرابعة هنا، وهي <span class="eq">P = 0</span> و <span class="eq">q = 0</span>، والنتيجة 0:</p>
+      <div class="table-wrap">
+        <table>
+          <tbody>
+            <tr>
+              <th class="label">P</th>
+              <td>1</td>
+              <td>0</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th class="label">q</th>
+              <td>0</td>
+              <td>1</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th class="label"><span class="eq">P ∧ q</span></th>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+              <td class="status-new">0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>الخانة الأخيرة هي التي لم تُكتب في الدفتر. القاعدة التي في الدفتر تعطيها مباشرة: الطرفان خاطئان، فالوصل خاطئ.</p>
+
+      <h3>أمثلة محلولة</h3>
+      <p>هذه جمل الدفتر تحت عنوان «مثال». بعضها خاطئ عن قصد، حتى نتدرّب على قيمة الصدق. كون الجملة خاطئة لا يعني أنها ليست قضية.</p>
+
+      <div class="sheet">
+        <p><strong>1.</strong> العدد 9 عدد طبيعي فردي، وهو عدد طبيعي أولي.</p>
+        <p>هذه قضية مركّبة بالوصل. 9 فردي، لأن 9 = 2×4 + 1. و 9 ليس أولياً، لأن 9 = 3×3. أحد الطرفين خاطئ، فالوصل كله خاطئ. القيمة: <strong>0</strong>.</p>
+      </div>
+      <div class="sheet">
+        <p><strong>2.</strong> نصف العدد 18 هو 9، والثلث هو 6.</p>
+        <p>18 ÷ 2 = 9، و 18 ÷ 3 = 6. الطرفان صحيحان، فالوصل صحيح. القيمة: <strong>1</strong>.</p>
+      </div>
+      <div class="sheet">
+        <p><strong>3.</strong> الجذر التربيعي لـ 81 هو 9.</p>
+        <p>لأن 9×9 = 81، والجذر التربيعي المقصود هو العدد الموجب. القيمة: <strong>1</strong>.</p>
+      </div>
+      <div class="sheet">
+        <p><strong>4.</strong> الجذر التربيعي لـ 27 هو 3.</p>
+        <p>3×3 = 9، لا 27. إذن 3 ليس جذر 27. القيمة: <strong>0</strong>. الجملة تبقى قضية، لكنها كاذبة.</p>
+      </div>
+
+      <h3>تحققي من نفسك</h3>
+
+      <details class="exercise">
+        <summary>1. هل «كم الساعة الآن؟» قضية؟</summary>
+        <details class="answer">
+          <summary>أظهري الإجابة</summary>
+          <p>ليست قضية. هي سؤال، والجملة الاستفهامية لا تُحكم بصحيح أو خاطئ.</p>
+        </details>
+      </details>
+
+      <details class="exercise">
+        <summary>2. هل «أغلقي الدفتر.» قضية؟</summary>
+        <details class="answer">
+          <summary>أظهري الإجابة</summary>
+          <p>ليست قضية. هي أمر.</p>
+        </details>
+      </details>
+
+      <details class="exercise">
+        <summary>3. ما قيمة القضية «4 عدد زوجي»؟</summary>
+        <details class="answer">
+          <summary>أظهري الإجابة</summary>
+          <p>صحيحة، أي 1. لأن 4 = 2×2.</p>
+        </details>
+      </details>
+
+      <details class="exercise">
+        <summary>4. P قيمتها 0. ما قيمة نفيها؟</summary>
+        <details class="answer">
+          <summary>أظهري الإجابة</summary>
+          <p>1. النفي يقلب القيمة: الخاطئ يصبح صحيحاً.</p>
+        </details>
+      </details>
+
+      <details class="exercise">
+        <summary>5. P قيمتها 1 و q قيمتها 0. ما قيمة P ∧ q؟</summary>
+        <details class="answer">
+          <summary>أظهري الإجابة</summary>
+          <p>0. الوصل يصح فقط إذا كان الطرفان معاً 1. هنا q خاطئة، فيكذب الوصل.</p>
+        </details>
+      </details>
+
+      <details class="exercise">
+        <summary>6. كم حالة في جدول حقيقة ثلاث قضايا؟</summary>
+        <details class="answer">
+          <summary>أظهري الإجابة</summary>
+          <p>8 حالات، لأن 2³ = 8. جدول الدفتر فيه 6 أعمدة، فتنقصه حالتان.</p>
+        </details>
+      </details>
+</section>
+
+    <footer>
+      <a href="../index.html">الرئيسية</a>
+    </footer>
+  </div>
+</body>
+</html>

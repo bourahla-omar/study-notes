@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>جمع سهل في دقيقة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="tests.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <p class="who"><a href="../index.html">الدروس</a></p>
+      <nav>
+        <a href="../index.html">الرئيسية</a>
+        <a href="../math/index.html">الرياضيات</a>
+        <a href="index.html" aria-current="page">اختبارات السرعة</a>
+      </nav>
+    </header>
+
+    <section id="screen-start">
+      <h1>جمع سهل في دقيقة</h1>
+      <p>عددان من 0 إلى 9. اكتبي المجموع قبل أن تنتهي الستون ثانية. الخطأ لا يوقف الجولة، وتظهر النتيجة الصحيحة ثم يأتي سؤال جديد.</p>
+      <p class="best-line">أفضل نتيجة: <b id="best">—</b></p>
+      <p><button class="primary" id="start" type="button">ابدئي</button></p>
+    </section>
+
+    <section id="screen-play" hidden>
+      <div class="timebar" aria-hidden="true"><div id="timefill"></div></div>
+      <div class="hud">
+        <span>الوقت <b id="time">60</b></span>
+        <span>النقاط <b id="score">0</b></span>
+        <span>الأفضل <b id="best-live">—</b></span>
+      </div>
+      <p class="problem eq" id="problem" dir="ltr">0 + 0</p>
+      <form class="play-form" id="form" autocomplete="off">
+        <input id="answer" inputmode="numeric" autocomplete="off" autocapitalize="off" enterkeyhint="done" aria-label="المجموع">
+        <button class="primary" type="submit">تم</button>
+      </form>
+      <p class="feedback" id="feedback" aria-live="polite"></p>
+    </section>
+
+    <section id="screen-end" hidden>
+      <h1 id="end-title" tabindex="-1">انتهى الوقت</h1>
+      <p>النقاط: <b id="final">0</b></p>
+      <p class="best-line" id="end-best"></p>
+      <p>
+        <button class="primary" id="again" type="button">جولة جديدة</button>
+      </p>
+      <p><a href="index.html">كل الاختبارات</a></p>
+    </section>
+  </div>
+  <script src="best.js"></script>
+  <script src="addition.js"></script>
+</body>
+</html>
