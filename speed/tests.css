@@ -265,3 +265,11 @@ button.choice.false {
   border-color: var(--teal);
   color: #fff;
 }
+
+.goal { margin: 14px auto 4px; max-width: 320px; font-size: 0.9rem; color: #6b726c; }
+.goalbar { height: 10px; background: #e8e2d6; border-radius: 5px; overflow: hidden; margin-top: 4px; }
+.goalbar > div { height: 100%; width: 0; background: #2e7d4f; transition: width .4s ease; }
+.goal.done { color: #2e7d4f; font-weight: 600; }
+.celebrate { background: #fff3c4; border-radius: 14px; padding: 12px 14px; margin: 6px 0 12px; animation: pop .5s ease-out; }
+.celebrate b { display: block; font-size: 1.2rem; margin-bottom: 4px; }
+@keyframes pop { 0% { transform: scale(.6); opacity: 0 } 70% { transform: scale(1.08) } 100% { transform: scale(1); opacity: 1 } }

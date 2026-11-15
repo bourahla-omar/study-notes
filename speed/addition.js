@@ -15,6 +15,38 @@
     return 60;
   }
 
+  // Daily goal: games played today, resets with the local date.
+  var DAILY_GOAL = 45;
+  var DAILY_KEY = "speedtest.addition.daily.v1";
+  function today() {
+    var d = new Date();
+    return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+  }
+  function dailyCount() {
+    try {
+      var d = JSON.parse(localStorage.getItem(DAILY_KEY));
+      if (d && d.date === today()) return d.count;
+    } catch (e) {}
+    return 0;
+  }
+  function countGame() {
+    var before = dailyCount();
+    var count = before + 1;
+    try { localStorage.setItem(DAILY_KEY, JSON.stringify({ date: today(), count: count })); } catch (e) {}
+    renderGoal();
+    return before < DAILY_GOAL && count >= DAILY_GOAL;
+  }
+  function renderGoal() {
+    var n = dailyCount();
+    var pct = Math.min(100, 100 * n / DAILY_GOAL);
+    var html = "هدف اليوم: " + Math.min(n, DAILY_GOAL) + " / " + DAILY_GOAL + " جولة" + (n >= DAILY_GOAL ? " \u2705" : "") +
+      '<div class="goalbar"><div style="width:' + pct + '%"></div></div>';
+    ["goal-start", "goal-end"].forEach(function (id) {
+      $(id).innerHTML = html;
+      $(id).classList.toggle("done", n >= DAILY_GOAL);
+    });
+  }
+
   function showBest() {
     var text = best > 0 ? String(best) : "—";
     $("best").textContent = text;
@@ -38,8 +70,8 @@
     var key = "";
     var guard = 0;
     do {
-      x = rand(0, 9);
-      y = rand(0, 9);
+      x = rand(1, 9);
+      y = rand(1, 9);
       key = x + "+" + y;
       guard++;
     } while (key === lastKey && guard < 6);
@@ -75,6 +107,10 @@
       ? "رقم قياسي جديد: " + result.best
       : (result.best > 0 ? "أفضل نتيجة تبقى " + result.best : "لا توجد أفضل نتيجة بعد.");
     showBest();
+    var hit = countGame();
+    $("celebrate").innerHTML = hit
+      ? '<div class="celebrate"><b>\u{1F389} حققتِ هدف اليوم!</b>' + DAILY_GOAL + ' جولة اليوم. أحسنتِ!</div>'
+      : "";
     showScreen("screen-end");
     $("end-title").focus();
   }
@@ -87,12 +123,19 @@
     var sum = a + b;
     var input = $("answer");
     input.classList.remove("flash-ok", "flash-bad");
-    if (given === sum) {
+    // Two-digit sum: its last digit alone also counts (5 for 15), same rule as the Quick Addition game.
+    var ok = given === sum || (sum >= 10 && sum < 100 && /^\d$/.test(raw) && given === sum % 10);
+    if (ok) {
       score++;
       $("score").textContent = String(score);
       input.classList.add("flash-ok");
-      $("feedback").textContent = "";
-      $("feedback").className = "feedback";
+      if (given !== sum) {
+        $("feedback").textContent = a + " + " + b + " = " + sum;
+        $("feedback").className = "feedback ok";
+      } else {
+        $("feedback").textContent = "";
+        $("feedback").className = "feedback";
+      }
     } else {
       input.classList.add("flash-bad");
       $("feedback").textContent = a + " + " + b + " = " + sum;
@@ -124,6 +167,7 @@
   }
 
   showBest();
+  renderGoal();
   $("start").addEventListener("click", start);
   $("again").addEventListener("click", start);
   $("form").addEventListener("submit", function (e) {

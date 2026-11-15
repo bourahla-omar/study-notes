@@ -24,8 +24,9 @@
 
     <section id="screen-start">
       <h1>جمع سهل في دقيقة</h1>
-      <p>عددان من 0 إلى 9. اكتبي المجموع قبل أن تنتهي الستون ثانية. الخطأ لا يوقف الجولة، وتظهر النتيجة الصحيحة ثم يأتي سؤال جديد.</p>
+      <p>عددان من 1 إلى 9. اكتبي المجموع (وإذا كان المجموع من رقمين مثل 15 يكفي أن تكتبي رقمه الأخير 5). قبل أن تنتهي الستون ثانية. الخطأ لا يوقف الجولة، وتظهر النتيجة الصحيحة ثم يأتي سؤال جديد.</p>
       <p class="best-line">أفضل نتيجة: <b id="best">—</b></p>
+      <div class="goal" id="goal-start"></div>
       <p><button class="primary" id="start" type="button">ابدئي</button></p>
     </section>
 
@@ -48,6 +49,8 @@
       <h1 id="end-title" tabindex="-1">انتهى الوقت</h1>
       <p>النقاط: <b id="final">0</b></p>
       <p class="best-line" id="end-best"></p>
+      <div id="celebrate"></div>
+      <div class="goal" id="goal-end"></div>
       <p>
         <button class="primary" id="again" type="button">جولة جديدة</button>
       </p>
