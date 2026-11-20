@@ -98,7 +98,7 @@ h3 {
 
 .meta { margin: 0 0 0.8rem; font-size: 0.92rem; }
 
-.card, .sheet, .callout, details.exercise {
+.card, .sheet, .callout, .exercise {
   background: var(--sheet);
   border: 1px solid var(--line);
   border-radius: 14px;
@@ -144,6 +144,9 @@ h3 {
   direction: ltr;
   unicode-bidi: isolate;
   display: inline-block;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
   font-family: "Cambria Math", "STIX Two Math", "Times New Roman", serif;
   font-weight: 600;
 }
@@ -183,15 +186,20 @@ ul, ol { padding-inline-start: 1.25rem; }
 
 li { margin: 0.25rem 0; }
 
-details.exercise { padding: 0.7rem 0.95rem; margin: 0.7rem 0; }
+.exercise { display: block; padding: 0.8rem 1rem; margin: 0.8rem 0; }
 
-details.exercise summary {
-  cursor: pointer;
-  font-weight: 700;
-  min-height: 44px;
-  display: flex;
-  align-items: center;
-}
+.exercise .statement { display: block; width: 100%; font-weight: 400; }
+
+.exercise .statement > :first-child { margin-top: 0; }
+
+.exercise .statement ol, .exercise .statement ul { font-weight: 400; }
+
+.exercise .solution { display: block; width: 100%; margin-top: 0.3rem; }
+
+/* a paragraph that holds only one formula: its own LTR block */
+p.formula { direction: ltr; text-align: left; overflow-x: auto; max-width: 100%; }
+
+bdi { unicode-bidi: isolate; white-space: nowrap; }
 
 details.answer { margin-top: 0.35rem; }
 
