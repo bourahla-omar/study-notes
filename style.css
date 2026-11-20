@@ -153,6 +153,7 @@ h3 {
 
 .table-wrap {
   overflow-x: auto;
+  direction: rtl;
   margin: 0.7rem 0 1rem;
   -webkit-overflow-scrolling: touch;
 }
@@ -160,6 +161,7 @@ h3 {
 table {
   border-collapse: collapse;
   width: 100%;
+  direction: rtl;
   background: #fff;
   font-size: 0.98rem;
 }
@@ -169,16 +171,26 @@ th, td {
   padding: 0.4rem 0.65rem;
   text-align: center;
   vertical-align: middle;
+  min-width: 3.2rem;
 }
 
 th {
   background: var(--soft);
   font-weight: 700;
+  text-align: right;
 }
+
+table.truth th { text-align: center; }
+
+/* formula/unit cells: LTR, centred, never squashed */
+td.f, th.f { direction: ltr; text-align: center; white-space: nowrap; }
+table .eq { white-space: nowrap; overflow-wrap: normal; max-width: none; }
+td bdi, th bdi { white-space: nowrap; }
 
 td.label, th.label { text-align: right; white-space: nowrap; }
 
 table.prose td, table.prose th { text-align: right; }
+table.prose td.f, table.prose th.f { text-align: center; }
 
 tr.added td { background: #f3faf6; }
 
